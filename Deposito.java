@@ -1,4 +1,5 @@
-/* Esta clase representa un  depósito cilíndrico donde se almacena aceite  */
+//VersiÃ³n 2
+/* Esta clase representa un  depÃ³sito cilÃ­ndrico donde se almacena aceite  */
 
 public class Deposito {    
 
@@ -7,12 +8,12 @@ public class Deposito {
     private float altura;
     private String idDeposito;
 
-    //Constructor sin parámetros auxiliar
-    public Deposito () { //Lo que hace es llamar al constructor con parámetros pasándole valores vacíos
+    //Constructor sin parÃ¡metros auxiliar
+    public Deposito () { //Lo que hace es llamar al constructor con parÃ¡metros pasÃ¡ndole valores vacÃ­os
         this(0,0,"");            } //Cierre del constructor
 
 
-    //Constructor de la clase que pide los parámetros necesarios
+    //Constructor de la clase que pide los parÃ¡metros necesarios
     public Deposito (float valor_diametro, float valor_altura, String valor_idDeposito) {
         if (valor_diametro > 0 && valor_altura > 0) {            
             diametro = valor_diametro;
@@ -22,7 +23,7 @@ public class Deposito {
             diametro = 10;
             altura = 5;
             idDeposito = "000";
-            System.out.println ("Creado depósito con valores por defecto diametro 10 metros altura 5 metros id 000" );
+            System.out.println ("Creado depÃ³sito con valores por defecto diametro 10 metros altura 5 metros id 000" );
         }   } //Cierre del constructor
 
     public void setValoresDeposito (String valor_idDeposito, float valor_diametro, float valor_altura) {
@@ -31,17 +32,17 @@ public class Deposito {
         altura = valor_altura;
         if (idDeposito !="" && valor_diametro > 0 && valor_altura > 0) {
         } else {
-            System.out.println ("Valores no admisibles. No se han establecido valores para el depósito");
-            //Deposito (0.0f, 0.0f, ""); Esto no es posible. Un constructor no es un método y por tanto no podemos llamarlo
+            System.out.println ("Valores no admisibles. No se han establecido valores para el depÃ³sito");
+            //Deposito (0.0f, 0.0f, ""); Esto no es posible. Un constructor no es un mÃ©todo y por tanto no podemos llamarlo
             idDeposito = "";
             diametro = 0;
             altura = 0;
-        }     } //Cierre del método
+        }     } //Cierre del mÃ©todo
 
-    public float getDiametro () { return diametro; } //Método de acceso
-    public float getAltura () { return altura; } //Método de acceso
-    public String getIdDeposito () { return idDeposito; } //Método de acceso
-    public float valorCapacidad () { //Método tipo función
+    public float getDiametro () { return diametro; } //MÃ©todo de acceso
+    public float getAltura () { return altura; } //MÃ©todo de acceso
+    public String getIdDeposito () { return idDeposito; } //MÃ©todo de acceso
+    public float valorCapacidad () { //MÃ©todo tipo funciÃ³n
         float capacidad;
         float pi = 3.1416f; //Si no incluimos la f el compilador considera que 3.1416 es double
         capacidad = pi * (diametro/2) * (diametro/2) * altura;
